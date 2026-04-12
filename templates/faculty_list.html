@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+
+            <h2>Faculty List</h2>
+
+            <a class="btn btn-blue" href="{% url 'faculty_create' %}">Add Faculty</a>
+
+            <table border="1">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                    <th>Date of join</th>
+                    <th>Actions</th>
+                </tr>
+
+                {% for i in data %}
+                <tr>
+                    <td>{{ i.emp_id }}</td>
+                    <td>{{ i.emp_name }}</td>
+                    <td>{{ i.emp_dept }}</td>
+                    <td>{{ i.emp_phn }}</td>
+                    <td>{{ i.emp_email }}</td>
+                    <td>{{ i.emp_date_of_join }}</td>
+                    <td>
+                        
+                        <a class="btn btn-green" href="{% url 'faculty_update' i.id %}">Edit</a>
+                        <a class="btn btn-orange" href="{% url 'faculty_delete' i.id %}">Delete</a>
+                    </td>
+
+                </tr>
+                {% endfor %}
+            </table>
+
+            <a class="btn btn-blue" href="{% url 'home' %}">Home</a>
+        </div>
+    </div>
+</body>
+</html>

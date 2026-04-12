@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="card auth-card">
+            <h2>Login</h2>
+
+            <h4 style="color:brown">{{ message }}</h4>
+
+            <form method="post">
+                {% csrf_token %}
+                
+                <input type="text" placeholder="Username" name="login_username">
+                <input type="password" placeholder="Password" name="login_password">
+
+                <button class="btn btn-dark">Login</button>
+            </form>
+
+            <br>
+            <a href="{% url 'registration' %}">Create account</a>
+        </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body style="
+    margin:0;
+    font-family:'Segoe UI', sans-serif;
+    background: url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b') no-repeat center center/cover;
+">
+
+    <!-- NAVBAR -->
+    <div style="
+        background: rgba(31, 41, 55, 0.9);
+        color:white;
+        padding:15px 30px;
+        display:flex;
+        justify-content:space-between;
+    ">
+        <h2 style="margin:0;">🎓 College Adminstartion</h2>
+    </div>
+
+    <!-- MAIN -->
+    <div style="width:90%; margin:auto; padding:20px;">
+        <h1 style="text-align:center; margin-top:20px; color:white;">
+            Dashboard
+        </h1>
+
+        <div style="
+            display:flex;
+            gap:20px;
+            justify-content:center;
+            margin-top:40px;
+            flex-wrap:wrap;
+        ">
+
+            <div style="
+                background: rgba(255,255,255,0.95);
+                padding:25px;
+                border-radius:12px;
+                width:220px;
+                text-align:center;
+                box-shadow:0 6px 15px rgba(0,0,0,0.3);
+            ">
+                <h3>Students</h3>
+                <a href="{% url 'student_list' %}" 
+                   style="display:block; margin-top:15px; padding:10px; background:#16a34a; color:white; border-radius:8px; text-decoration:none;">
+                   Open
+                </a>
+            </div>
+
+            <div style="
+                background: rgba(255,255,255,0.95);
+                padding:25px;
+                border-radius:12px;
+                width:220px;
+                text-align:center;
+                box-shadow:0 6px 15px rgba(0,0,0,0.3);
+            ">
+                <h3>Departments</h3>
+                <a href="{% url 'department_list' %}" 
+                   style="display:block; margin-top:15px; padding:10px; background:#2563eb; color:white; border-radius:8px; text-decoration:none;">
+                   Open
+                </a>
+            </div>
+
+            <div style="
+                background: rgba(255,255,255,0.95);
+                padding:25px;
+                border-radius:12px;
+                width:220px;
+                text-align:center;
+                box-shadow:0 6px 15px rgba(0,0,0,0.3);
+            ">
+                <h3>Faculty</h3>
+                <a href="{% url 'faculty_list' %}" 
+                   style="display:block; margin-top:15px; padding:10px; background:#f59e0b; color:white; border-radius:8px; text-decoration:none;">
+                   Open
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

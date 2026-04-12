@@ -1,0 +1,134 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    min-height: 100vh;
+    color: #333;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ===== CARD ===== */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* ===== BUTTON ===== */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* ===== COLORS ===== */
+.btn-blue { background: #2563eb; }
+.btn-green { background: #16a34a; }
+.btn-orange { background: #f59e0b; }
+.btn-dark { background: #1f2937; }
+
+/* ===== FORM ===== */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* ===== TABLE ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th {
+    background: #1f2937;
+    color: white;
+    padding: 10px;
+}
+
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background: #1f2937;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ===== DASHBOARD BUTTONS ===== */
+.dashboard {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.dashboard-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    width: 220px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.register-bg {
+    background: url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b') no-repeat center center/cover;
+}
+
+.auth-card {
+    max-width: 400px;
+    margin: auto;
+    margin-top: 80px;
+}
+
+/* .btn1 {
+    display: block;
+    width: 100%;
+} */
+
+.card h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+td .btn {
+    margin-right: 5px;
+}
+
+.card > a.btn {
+    margin-top: 15px;
+    display: inline-block;
+}
