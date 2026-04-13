@@ -87,21 +87,21 @@ import os
 
 if  os.environ.get('RENDER'):
     #
-    DATABASES={
-        'default':{
-            "ENGINE":"django.db.backends.mysql",
-            "NAME": os.environ.get("MYSQLDATABASE"),
-            "USER": os.environ.get("MYSQLUSER"),
-            "PASSWORD": os.environ.get("MYSQLPASSWORD"),
-            "HOST": os.environ.get("MYSQLHOST"),
-            "PORT":os.environ.get("MYSQLPORT","3306"),
-            "OPTIONS": {
+    DATABASES = {
+    'default': {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": os.environ.get("MYSQLDATABASE"),
+        "USER": os.environ.get("MYSQLUSER"),
+        "PASSWORD": os.environ.get("MYSQLPASSWORD"),
+        "HOST": os.environ.get("MYSQLHOST"),
+        "PORT": os.environ.get("MYSQLPORT", "3306"),
+        "OPTIONS": {
             "ssl": {
-                "ca": os.path.join(BASE_DIR, "certs/ca.pem")
+                "ca": str(BASE_DIR / "certs" / "ca.pem")
             }
         }
-        }
     }
+}
 else:
 
     DATABASES={
