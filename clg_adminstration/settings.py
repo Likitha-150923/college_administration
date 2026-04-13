@@ -95,6 +95,11 @@ if  os.environ.get('RENDER'):
             "PASSWORD": os.environ.get("MYSQLPASSWORD"),
             "HOST": os.environ.get("MYSQLHOST"),
             "PORT":os.environ.get("MYSQLPORT","3306"),
+            "OPTIONS": {
+            "ssl": {
+                "ca": "/etc/ssl/certs/ca-certificates.crt"
+            }
+        }
         }
     }
 else:
