@@ -15,6 +15,7 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 temp=BASE_DIR / 'templates'
+STATIC_DIR=BASE_DIR / 'static'
 
 
 # Quick-start development settings - unsuitable for production
@@ -24,7 +25,7 @@ temp=BASE_DIR / 'templates'
 SECRET_KEY = 'django-insecure-6lkn)zf1xd=b$-udtv)qhu8w33_mpd$k7qihf_jw_)-qlmjw)('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -95,11 +96,9 @@ if  os.environ.get('RENDER'):
         "PASSWORD": os.environ.get("MYSQLPASSWORD"),
         "HOST": os.environ.get("MYSQLHOST"),
         "PORT": os.environ.get("MYSQLPORT", "3306"),
-        "OPTIONS": {
-            "ssl": {
-                "ca": str(BASE_DIR / "certs" / "ca.pem")
-            }
-        }
+        "OPTIONS": {}
+       
+        
     }
 }
 else:
