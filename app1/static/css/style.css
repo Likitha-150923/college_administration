@@ -111,7 +111,9 @@ table td {
     max-width: 400px;
     margin: auto;
     margin-top: 80px;
+    backdrop-filter: blur(5px);
 }
+
 
 /* .btn1 {
     display: block;

@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-<body>
+
+<body class="register-bg">
+
     <div class="container">
         <div class="card auth-card">
             <h2>Login</h2>
@@ -27,7 +30,6 @@
             <a href="{% url 'registration' %}">Create account</a>
         </div>
     </div>
-
 
 </body>
 </html>
