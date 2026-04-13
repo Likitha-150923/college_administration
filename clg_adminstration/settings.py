@@ -97,7 +97,7 @@ if  os.environ.get('RENDER'):
             "PORT":os.environ.get("MYSQLPORT","3306"),
             "OPTIONS": {
             "ssl": {
-                "ca": "/etc/ssl/certs/ca-certificates.crt"
+                "ca": os.path.join(BASE_DIR, "certs/ca.pem")
             }
         }
         }
